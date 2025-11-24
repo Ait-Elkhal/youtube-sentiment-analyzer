@@ -1,3 +1,6 @@
+
+
+```markdown
 🎯 YouTube Sentiment Analyzer by AIT-ELKHAL Chihab-Eddine
 Analyse Automatique des Sentiments des Commentaires YouTube - Système MLOps Complet
 
@@ -284,5 +287,6 @@ Système MLOps professionnel opérationnel avec des performances exceptionnelles
 Prêt pour la démonstration et l'utilisation en production ! 🚀
 
 Développé avec ❤️ par AIT-ELKHAL Chihab-Eddine - Projet MLOps Complet
+```
 
 
