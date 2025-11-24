@@ -1,6 +1,3 @@
-
-
-```markdown
 🎯 YouTube Sentiment Analyzer by AIT-ELKHAL Chihab-Eddine
 Analyse Automatique des Sentiments des Commentaires YouTube - Système MLOps Complet
 
@@ -132,7 +129,6 @@ Analyser les sentiments (Bouton "Analyser avec AIT-ELKHAL")
 Explorer les résultats avec filtres et visualisations
 
 2. Via l'API Directe
-```python
 import requests
 
 API_URL = "https://ait-elkhal-youtube-sentiment-analyzer.hf.space"
@@ -150,20 +146,17 @@ response = requests.post(f"{API_URL}/predict/batch", json={
     ]
 })
 print(response.json())
-```
 
 🌐 API AIT-ELKHAL
 Endpoints Disponibles
-| Endpoint | Méthode | Description |
-|----------|---------|-------------|
-| / | GET | Page d'accueil |
-| /health | GET | Statut de l'API et du modèle |
-| /predict/batch | POST | Analyse par lot de commentaires |
-| /predict/single | POST | Analyse d'un seul commentaire |
-| /docs | GET | Documentation interactive |
+Endpoint	Méthode	Description
+/	GET	Page d'accueil
+/health	GET	Statut de l'API et du modèle
+/predict/batch	POST	Analyse par lot de commentaires
+/predict/single	POST	Analyse d'un seul commentaire
+/docs	GET	Documentation interactive
 
 Exemple de Réponse
-```json
 {
   "predictions": [
     {
@@ -188,17 +181,15 @@ Exemple de Réponse
   },
   "processing_time": 0.0015
 }
-```
 
 🧪 Tests & Validation
 Résultats des Tests Automatisés
-| Test | Résultat | Seuil | Statut |
-|------|----------|-------|--------|
-| Accuracy Modèle | 90.95% | >75% | ✅ DÉPASSÉ |
-| F1-score | 90.83% | >70% | ✅ DÉPASSÉ |
-| Temps réponse API | 0.47s-1.25s | <5s | ✅ DÉPASSÉ |
-| Robustesse | 100% | Gestion erreurs | ✅ PARFAIT |
-| Disponibilité | 100% | >95% | ✅ PARFAIT |
+Test	Résultat	Seuil	Statut
+Accuracy Modèle	90.95%	>75%	✅ DÉPASSÉ
+F1-score	90.83%	>70%	✅ DÉPASSÉ
+Temps réponse API	0.47s-1.25s	<5s	✅ DÉPASSÉ
+Robustesse	100%	Gestion erreurs	✅ PARFAIT
+Disponibilité	100%	>95%	✅ PARFAIT
 
 Checklist Extension Chrome ✅
 ✅ Chargement sans erreur
@@ -210,22 +201,20 @@ Checklist Extension Chrome ✅
 
 📊 Performances
 🎯 Métriques Clés
-- Précision modèle : 90.95%
-- Temps réponse API : < 1.3s (50 commentaires)
-- Temps inférence : 11ms (50 commentaires)
-- Disponibilité : 100%
-- Robustesse : 100% cas edge gérés
+Précision modèle : 90.95%
+Temps réponse API : < 1.3s (50 commentaires)
+Temps inférence : 11ms (50 commentaires)
+Disponibilité : 100%
+Robustesse : 100% cas edge gérés
 
 📈 Benchmarks
-| Scenario | Temps Réponse | Statut |
-|----------|---------------|--------|
-| Health Check | 0.668s | ✅ Excellent |
-| 5 commentaires | 0.474s | ✅ Excellent |
-| 20 commentaires | 0.498s | ✅ Excellent |
-| 50 commentaires | 1.251s | ✅ Excellent |
+Scenario	Temps Réponse	Statut
+Health Check	0.668s	✅ Excellent
+5 commentaires	0.474s	✅ Excellent
+20 commentaires	0.498s	✅ Excellent
+50 commentaires	1.251s	✅ Excellent
 
 📁 Structure du Projet
-```
 youtube-sentiment-analyzer/
 ├── 📁 chrome-extension/          # Extension Chrome
 │   ├── manifest.json
@@ -259,18 +248,17 @@ youtube-sentiment-analyzer/
 ├── Dockerfile                   # Configuration Docker
 ├── requirements.txt            # Dépendances Python
 └── README.md                   # Documentation
-```
 
 👨‍💻 Auteur
-**AIT-ELKHAL Chihab-Eddine**
+AIT-ELKHAL Chihab-Eddine
 Étudiant en INDIA - ENSAM Rabat
 Module: Virtualisation & Cloud Computing
 Année Universitaire: 2025/2026
 
 📞 Contact
-- **API Live** : https://ait-elkhal-youtube-sentiment-analyzer.hf.space
-- **Documentation** : /docs
-- **Health Check** : /health
+API Live : https://ait-elkhal-youtube-sentiment-analyzer.hf.space
+Documentation : /docs
+Health Check : /health
 
 📄 Licence
 MIT License - Voir le fichier LICENSE pour plus de détails.
@@ -287,6 +275,3 @@ Système MLOps professionnel opérationnel avec des performances exceptionnelles
 Prêt pour la démonstration et l'utilisation en production ! 🚀
 
 Développé avec ❤️ par AIT-ELKHAL Chihab-Eddine - Projet MLOps Complet
-```
-
-
