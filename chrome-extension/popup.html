@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Sentiment Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- En-tête -->
+        <header class="header">
+            <h1>🎭 Sentiment Analyzer</h1>
+            <div class="theme-toggle">
+                <button id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+        <!-- Statut de connexion -->
+        <div class="status-container">
+            <div id="connectionStatus" class="status offline">
+                <span class="status-dot"></span>
+                <span class="status-text">Déconnecté</span>
+            </div>
+        </div>
+
+        <!-- Contrôles principaux -->
+        <div class="controls">
+            <button id="analyzeBtn" class="btn btn-primary" disabled>
+                <span class="btn-text">Analyser les commentaires</span>
+                <div class="loading-spinner hidden"></div>
+            </button>
+            
+            <button id="extractBtn" class="btn btn-secondary">
+                Extraire les commentaires
+            </button>
+        </div>
+
+        <!-- Statistiques globales -->
+        <div id="statsSection" class="stats-section hidden">
+            <h3>📊 Statistiques Globales</h3>
+            <div class="stats-grid">
+                <div class="stat-card positive">
+                    <div class="stat-value" id="positiveCount">0</div>
+                    <div class="stat-label">Positifs</div>
+                    <div class="stat-percentage" id="positivePercent">0%</div>
+                </div>
+                <div class="stat-card neutral">
+                    <div class="stat-value" id="neutralCount">0</div>
+                    <div class="stat-label">Neutres</div>
+                    <div class="stat-percentage" id="neutralPercent">0%</div>
+                </div>
+                <div class="stat-card negative">
+                    <div class="stat-value" id="negativeCount">0</div>
+                    <div class="stat-label">Négatifs</div>
+                    <div class="stat-percentage" id="negativePercent">0%</div>
+                </div>
+            </div>
+            
+            <!-- Graphique de distribution -->
+            <div class="chart-container">
+                <canvas id="sentimentChart" width="200" height="100"></canvas>
+            </div>
+        </div>
+
+        <!-- Filtres -->
+        <div class="filters-section">
+            <h4>Filtrer par sentiment:</h4>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="positive">👍 Positifs</button>
+                <button class="filter-btn" data-filter="neutral">😐 Neutres</button>
+                <button class="filter-btn" data-filter="negative">👎 Négatifs</button>
+            </div>
+        </div>
+
+        <!-- Liste des commentaires -->
+        <div id="commentsSection" class="comments-section hidden">
+            <h3>💬 Commentaires Analysés</h3>
+            <div id="commentsList" class="comments-list">
+                <!-- Les commentaires seront injectés ici -->
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions-section">
+            <button id="exportBtn" class="btn btn-outline" disabled>
+                📊 Exporter les résultats
+            </button>
+            <button id="copyBtn" class="btn btn-outline" disabled>
+                📋 Copier le résumé
+            </button>
+        </div>
+
+        <!-- Paramètres -->
+        <div class="settings-section">
+            <details>
+                <summary>⚙️ Paramètres</summary>
+                <div class="settings-content">
+                    <label for="apiUrl">URL de l'API:</label>
+                    <input type="text" id="apiUrl" value="https://hardyzona-youtube-sentiment-analyzer.hf.space" placeholder="https://hardyzona-youtube-sentiment-analyzer.hf.space">
+                    
+                    <label for="maxComments">Commentaires max à analyser:</label>
+                    <input type="number" id="maxComments" value="50" min="1" max="100">
+                    
+                    <button id="saveSettings" class="btn btn-secondary">Sauvegarder</button>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

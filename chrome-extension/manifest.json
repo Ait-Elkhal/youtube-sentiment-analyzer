@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Sentiment Analyzer",
+    "version": "1.0.0",
+    "description": "Analyse les sentiments des commentaires YouTube en temps réel",
+    "author": "Votre Nom",
+    
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    
+    "host_permissions": [
+      "https://*.youtube.com/*",
+      "https://hardyzona-youtube-sentiment-analyzer.hf.space/*",
+      "https://*.huggingface.co/*"
+    ],
+    
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Analyser les sentiments YouTube"
+    },
+    
+    "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    
+    "background": {
+      "service_worker": "background.js"
+    },
+    
+    "web_accessible_resources": [{
+      "resources": ["styles/*", "images/*"],
+      "matches": ["https://*.youtube.com/*"]
+    }]
+  }
